@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="hello()">start</button>
+    <p id="hehe"></p>
+    <script>
+      function hello() {
+        var start = performance.now();
+        for (i = 0; i < 10000; i++);
+        var end = performance.now();
+        var tot = start - end;
+        document.getElementById("hehe").innerText = tot.toFixed(2);
+      }
+    </script>
+  </body>
+</html>
