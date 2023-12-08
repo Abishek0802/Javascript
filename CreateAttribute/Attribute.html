@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .Dummy {
+        color: blue;
+        font-size: x-large;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Wellcome Abishek</h1>
+      <button onclick="SetAttribute()">Set Attribute</button>
+      <button onclick="RemoveAttribute()">Remove Attribute</button>
+    </div>
+    <script>
+      function SetAttribute() {
+        var Attribute = document.createAttribute("class");
+        Attribute.value = "Dummy";
+        document.getElementsByTagName("h1")[0].setAttributeNode(Attribute);
+      }
+      function RemoveAttribute(){
+                    document.getElementsByTagName("h1")[0].removeAttribute("class")
+      }
+    </script>
+  </body>
+</html>
