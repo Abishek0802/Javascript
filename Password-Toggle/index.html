@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Toggle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #passwordInput {
+            padding: 10px;
+            margin-right: 5px;
+        }
+
+        #toggleIcon {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <label for="passwordInput">Password:</label>
+    <input type="password" id="passwordInput">
+    <span id="toggleIcon" onclick="togglePasswordVisibility()">👁️</span>
+
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('passwordInput');
+            const toggleIcon = document.getElementById('toggleIcon');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.textContent = '👁️';
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.textContent = '👁️';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
